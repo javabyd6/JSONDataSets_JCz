@@ -1,19 +1,36 @@
 package pl.sda.json;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.util.List;
 
 /**
  * @author Jarek Czaplicki
  */
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Geolocation {
 
+public class Geolocation {
    private String type;
    private List<Double> coordinates;
+
+   public Geolocation() {}
+
+   public Geolocation(String type, List<Double> coordinates) {
+      this.type = type;
+      this.coordinates = coordinates;
+   }
+
+   public String getType() {
+      return type;
+   }
+
+   public void setType(String type) {
+      this.type = type;
+   }
+
+   public List<Double> getCoordinates() {
+      return coordinates;
+   }
+
+   public void setCoordinates(List<Double> coordinates) {
+      this.coordinates = coordinates;
+   }
 }
+
